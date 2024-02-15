@@ -7,7 +7,7 @@ function Connector() {
         Connect wallet
       </button>
       <button className="flex lg:hidden">
-        <CiLogin className="h-[1.8rem] w-[1.8rem] text-white" />
+        <CiLogin className="h-4 w-4 text-white lg:h-[1.8rem] lg:w-[1.8rem]" />
       </button>
     </>
   );
