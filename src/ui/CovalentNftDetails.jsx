@@ -41,7 +41,7 @@ function CovalentNftDetails() {
             >
               <IoIosMore className="text-black dark:text-white " />
               {moreIsOpen && (
-                <div className="absolute left-[0px] top-[39px] z-[400] h-fit w-[240px] sm:w-[300px] rounded-md bg-white p-4  text-[#121212] shadow-md dark:bg-black dark:text-white dark:shadow-none">
+                <div className="absolute left-[-80px] top-[39px] z-[400] h-fit w-[240px] lg:w-[300px] rounded-md bg-white p-2 sm:p-4  text-[#121212] shadow-md dark:bg-black dark:text-white dark:shadow-none">
                   <button
                     className="flex w-full items-center justify-between rounded-lg px-3 py-2 hover:bg-[#c4c4c4] hover:text-white dark:hover:bg-[#ffffff] dark:hover:text-black"
                     onClick={() => {

@@ -87,7 +87,7 @@ function NftPage() {
             >
               <IoIosMore className="text-black dark:text-white " />
               {moreIsOpen && (
-                <div className="absolute left-[-265px] top-[39px] z-[400] h-fit w-[300px] rounded-md bg-black p-4 text-white">
+                <div className="absolute left-[-240px] top-[39px] z-[400] h-fit w-[240px] rounded-md bg-black p-2 text-xs text-white lg:left-[-265px] lg:w-[300px] lg:p-4 lg:text-sm">
                   <button
                     className="flex w-full items-center justify-between rounded-lg px-3 py-2 hover:bg-[#ffffff] hover:text-black"
                     onClick={() => {
@@ -184,7 +184,7 @@ function NftPage() {
           <CreatorStat statName={"Unique minters"}>16</CreatorStat>
           <CreatorStat statName={"Mint start"}>17th Jan 2024.</CreatorStat>
         </div>
-        <div className="flex w-full flex-col items-center justify-center gap-y-3 rounded-b-[10px] bg-[#0a0a23] px-4 pb-[48px] pt-[32px]">
+        <div className="flex w-full flex-col items-center justify-center gap-y-3 rounded-b-[10px] bg-[#0a0a23] px-4 pb-[48px] pt-[32px] text-xs lg:text-base">
           <a
             className="w-full rounded-[5px] bg-[#ff4b8b] py-[15px] text-center text-sm font-bold leading-6 text-white lg:w-[314px] lg:text-base"
             href={`https://opensea.io/assets/zora/0xfeee3700698f8d75bcc18e009022c7b44d2af44f/${currentNft?.token_id.toString().slice(0, 2)}`}
