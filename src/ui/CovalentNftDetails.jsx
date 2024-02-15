@@ -25,7 +25,7 @@ function CovalentNftDetails() {
             <img src={avatar} className="lg:w-auto lg:h-auto w-[20px] h-[20px]" alt="" />
             <h4>Covalent</h4>
           </div>
-          <div className="flex items-center gap-x-2">
+          <div className="flex items-center gap-x-2 text-sm lg:text-base">
             <button
               className="flex lg:h-[35px] w-6 h-6 lg:w-[35px] items-center justify-center rounded-[5px] bg-[#c4c4c4] dark:bg-black"
               onClick={() => {
@@ -41,7 +41,7 @@ function CovalentNftDetails() {
             >
               <IoIosMore className="text-black dark:text-white " />
               {moreIsOpen && (
-                <div className="absolute left-[0px] top-[39px] z-[400] h-fit w-[300px] rounded-md bg-white p-4  text-[#121212] shadow-md dark:bg-black dark:text-white dark:shadow-none">
+                <div className="absolute left-[0px] top-[39px] z-[400] h-fit w-[240px] sm:w-[300px] rounded-md bg-white p-4  text-[#121212] shadow-md dark:bg-black dark:text-white dark:shadow-none">
                   <button
                     className="flex w-full items-center justify-between rounded-lg px-3 py-2 hover:bg-[#c4c4c4] hover:text-white dark:hover:bg-[#ffffff] dark:hover:text-black"
                     onClick={() => {
@@ -58,26 +58,26 @@ function CovalentNftDetails() {
                   </button>
                   <button className="flex w-full items-center justify-between rounded-lg px-3 py-2 hover:bg-[#c4c4c4] hover:text-white dark:hover:bg-[#ffffff] dark:hover:text-black">
                     <div className="flex items-center gap-x-2">
-                      <GoDownload className="h-4 w-4" />
+                      <GoDownload className="lg:h-4 h-3 w-3 lg:w-4" />
                       Download
                     </div>
                   </button>
                   <button className="flex w-full items-center justify-between rounded-lg px-3 py-2 hover:bg-[#c4c4c4] hover:text-white dark:hover:bg-[#ffffff] dark:hover:text-black">
                     <div className="flex items-center gap-x-2">
-                      <SlPicture className="h-4 w-4" />
+                      <SlPicture className="lg:h-4 h-3 w-3 lg:w-4" />
                       View token thumbnail
                     </div>
                   </button>
                   <div className="mt-2 border-t-[0.5px] border-t-white pt-2">
                     <a href="https://opensea.io/collection/alchemist-program-4-0" className="flex w-full items-center justify-between rounded-lg px-3 py-2 hover:bg-[#c4c4c4] hover:text-white dark:hover:bg-[#ffffff] dark:hover:text-black">
                       <div className="flex items-center gap-x-2">
-                        <img src={opensea} alt="" className="h-4 w-4" />
+                        <img src={opensea} alt="" className="lg:h-4 h-3 w-3 lg:w-4" />
                         Opensea
                       </div>
                     </a>
                     <button className="flex w-full items-center justify-between rounded-lg px-3 py-2 text-red-600 hover:bg-[#c4c4c4] hover:text-red-600 dark:hover:bg-[#ffffff]">
                       <div className="flex items-center gap-x-2">
-                        <img src={report} alt="" className="h-4 w-4" />
+                        <img src={report} alt="" className="lg:h-4 h-3 w-3 lg:w-4" />
                         Report
                       </div>
                     </button>
