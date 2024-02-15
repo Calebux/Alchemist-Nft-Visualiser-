@@ -47,7 +47,7 @@ function NftPage() {
     <div className="grid grid-cols-[1fr] gap-[43px] lg:grid-cols-[1fr_1fr]">
       {isSharing &&
         createPortal(<ShareModal setIsOpen={setIsSharing} />, document.body)}
-      <div className="lg:h-[600px] lg:w-[600px] overflow-hidden rounded-lg">
+      <div className="overflow-hidden rounded-lg lg:h-[600px] lg:w-[600px]">
         <video
           src={`https://ipfs.decentralized-content.com/ipfs/${currentNft?.external_data.animation_url.slice(7)}`}
           preload="auto"
@@ -65,19 +65,25 @@ function NftPage() {
       </div>
       <div className="w-full text-[#121212] dark:text-white">
         <div className="mb-6 flex items-center justify-between">
-          <h1 className="text-base lg:text-[28px] font-medium lg:font-extrabold leading-6">
+          <h1 className="text-base font-medium leading-6 lg:text-[28px] lg:font-extrabold">
             {currentNft?.external_data.name}
           </h1>
           <div className="flex items-center gap-x-2">
             <button
-              className="flex lg:h-[35px] h-6 w-6 lg:w-[35px] items-center justify-center rounded-[5px] bg-[#c4c4c4] dark:bg-black"
-              onClick={() => setIsSharing(true)}
+              className="flex h-6 w-6 items-center justify-center rounded-[5px] bg-[#c4c4c4] dark:bg-black lg:h-[35px] lg:w-[35px]"
+              onClick={() => {
+                setMoreIsOpen(false);
+                setIsSharing(true);
+              }}
             >
               <CiShare1 className="text-black dark:text-white " />
             </button>
             <button
-              className="relative flex lg:h-[35px] w-5 h-5 lg:w-[35px] items-center justify-center rounded-[5px] bg-[#c4c4c4] dark:bg-black"
-              onClick={() => setMoreIsOpen((show) => !show)}
+              className="relative flex h-5 w-5 items-center justify-center rounded-[5px] bg-[#c4c4c4] dark:bg-black lg:h-[35px] lg:w-[35px]"
+              onClick={() => {
+                setIsSharing(false);
+                setMoreIsOpen((show) => !show);
+              }}
             >
               <IoIosMore className="text-black dark:text-white " />
               {moreIsOpen && (
@@ -134,25 +140,29 @@ function NftPage() {
           <div className="relative h-fit w-fit">
             <img
               src={alchemistLogo}
-              className="lg:h-[50px] h-10 w-10 lg:w-[50px] rounded-[5px]"
+              className="h-10 w-10 rounded-[5px] lg:h-[50px] lg:w-[50px]"
               alt=""
             />
             <img
               src={avatar}
-              className="absolute bottom-[-6px] right-[-12px] z-[60] lg:h-6 h-5 w-5 lg:w-6"
+              className="absolute bottom-[-6px] right-[-12px] z-[60] h-5 w-5 lg:h-6 lg:w-6"
               alt=""
             />
           </div>
           <div>
-            <h2 className="lg:text-xl text-sm font-semibold leading-6">Alchemist 4.0</h2>
+            <h2 className="text-sm font-semibold leading-6 lg:text-xl">
+              Alchemist 4.0
+            </h2>
             <h3 className="text-sm font-semibold leading-6 text-[#928b8b]">
               Covalent
             </h3>
           </div>
         </div>
-        <div className="mb-5 mt-[20px] w-full rounded-[10px] border-[0.5px] border-[#c4c4c4] p-[10px] lg:px-4 px-2 dark:border-white">
+        <div className="mb-5 mt-[20px] w-full rounded-[10px] border-[0.5px] border-[#c4c4c4] p-[10px] px-2 dark:border-white lg:px-4">
           <div className="flex items-center justify-between ">
-            <h3 className="text-sm sm:text-base font-semibold leading-6">Description</h3>
+            <h3 className="text-sm font-semibold leading-6 sm:text-base">
+              Description
+            </h3>
             <h6 className="text-sm font-semibold leading-6 text-[#ff4b8b]">
               Video : 14.56mb
             </h6>
@@ -162,7 +172,7 @@ function NftPage() {
           </p>
         </div>
 
-        <div className="flex justify-between rounded-t-[10px] bg-[#ff4b8b] bg-opacity-10 px-3 sm:px-9 pb-7 pt-4">
+        <div className="flex justify-between rounded-t-[10px] bg-[#ff4b8b] bg-opacity-10 px-3 pb-7 pt-4 sm:px-9">
           <CreatorStat statName={"First minter"}>
             <img src={avatar} className="h-3 w-3" alt="" />
             Covalent
@@ -174,9 +184,9 @@ function NftPage() {
           <CreatorStat statName={"Unique minters"}>16</CreatorStat>
           <CreatorStat statName={"Mint start"}>17th Jan 2024.</CreatorStat>
         </div>
-        <div className="flex w-full flex-col items-center justify-center px-4 gap-y-3 rounded-b-[10px] bg-[#0a0a23] pb-[48px] pt-[32px]">
+        <div className="flex w-full flex-col items-center justify-center gap-y-3 rounded-b-[10px] bg-[#0a0a23] px-4 pb-[48px] pt-[32px]">
           <a
-            className="lg:w-[314px] w-full rounded-[5px] bg-[#ff4b8b] py-[15px] text-center text-sm lg:text-base font-bold leading-6 text-white"
+            className="w-full rounded-[5px] bg-[#ff4b8b] py-[15px] text-center text-sm font-bold leading-6 text-white lg:w-[314px] lg:text-base"
             href={`https://opensea.io/assets/zora/0xfeee3700698f8d75bcc18e009022c7b44d2af44f/${currentNft?.token_id.toString().slice(0, 2)}`}
           >
             Opensea
@@ -193,7 +203,7 @@ function NftPage() {
             m {Math.floor((Math.abs(new Date() - currentTime) / 1000) % 60)}s
           </h1>
 
-          <div className="mt-8 lg:w-[80%] w-full text-white dark:text-white">
+          <div className="mt-8 w-full text-white dark:text-white lg:w-[80%]">
             <div className="grid grid-cols-[1fr_1fr]">
               <div className="w-full border-b-[0.5px] border-b-[#333] pb-2 text-center">
                 0 comments
