@@ -3,7 +3,7 @@ import avatar from "../assets/covalentAvatar.png";
 
 function CreatorStats() {
   return (
-    <div className="flex items-center gap-x-[47px]">
+    <div className="flex items-center justify-between lg:justify-start lg:gap-x-[47px]">
       <CreatorStat statName={"First minter"}>
         <img src={avatar} className="h-3 w-3" alt="" />
         Covalent

@@ -16,18 +16,18 @@ function CovalentNftDetails() {
   const [moreIsOpen, setMoreIsOpen] = useState(false);
 
   return (
-    <div className="flex items-center justify-between border-b-[0.5px] border-b-[#c4c4c4] pb-[21px] pt-7">
+    <div className="flex lg:flex-row flex-col gap-y-4 lg:items-center justify-between border-b-[0.5px] border-b-[#c4c4c4] pb-[21px] pt-7">
       {isSharing &&
         createPortal(<ShareModal setIsOpen={setIsSharing} />, document.body)}
       <div>
         <div className="flex items-center gap-x-4">
-          <div className="flex items-center gap-x-2 text-[28px] font-semibold leading-6 text-black dark:text-white">
-            <img src={avatar} alt="" />
+          <div className="flex items-center gap-x-2 text-base lg:text-[28px] font-semibold leading-6 text-black dark:text-white">
+            <img src={avatar} className="lg:w-auto lg:h-auto w-[20px] h-[20px]" alt="" />
             <h4>Covalent</h4>
           </div>
           <div className="flex items-center gap-x-2">
             <button
-              className="flex h-[35px] w-[35px] items-center justify-center rounded-[5px] bg-[#c4c4c4] dark:bg-black"
+              className="flex lg:h-[35px] w-6 h-6 lg:w-[35px] items-center justify-center rounded-[5px] bg-[#c4c4c4] dark:bg-black"
               onClick={() => {
                 setMoreIsOpen(false);
                 setIsSharing(true);
@@ -36,7 +36,7 @@ function CovalentNftDetails() {
               <CiShare1 className="text-black dark:text-white " />
             </button>
             <button
-              className="relative flex h-[35px] w-[35px] items-center justify-center rounded-[5px] bg-[#c4c4c4] dark:bg-black"
+              className="relative flex lg:h-[35px] h-6 w-6 lg:w-[35px] items-center justify-center rounded-[5px] bg-[#c4c4c4] dark:bg-black"
               onClick={() => setMoreIsOpen((show) => !show)}
             >
               <IoIosMore className="text-black dark:text-white " />
@@ -87,7 +87,7 @@ function CovalentNftDetails() {
             </button>
           </div>
         </div>
-        <p className="mt-3 w-[430px] text-sm font-normal leading-6 text-[#121212] dark:text-white">
+        <p className="mt-3 lg:w-[430px] text-xs sm:text-sm font-normal leading-6 text-[#121212] dark:text-white">
           Special-made NFTs for Alchemists that have shown above and beyond
           contributions to the ecosystem and community. These are available for
           a limited time for version Alchemist 4.0.

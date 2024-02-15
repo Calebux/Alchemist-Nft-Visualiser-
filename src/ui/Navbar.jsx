@@ -5,7 +5,7 @@ import SearchBar from "./SearchBar";
 
 function Navbar() {
   return (
-    <div className="flex items-center justify-between bg-[#0A0A23] px-[70px] py-7 dark:bg-[#000426]">
+    <div className="flex items-center justify-between bg-[#0A0A23] px-6 sm:px-[70px] py-4 sm:py-7 dark:bg-[#000426]">
       <div className="flex items-center gap-x-[61px]">
         <Logo />
         <SearchBar />

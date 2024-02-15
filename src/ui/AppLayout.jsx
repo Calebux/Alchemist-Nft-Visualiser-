@@ -5,7 +5,7 @@ function AppLayout() {
   return (
     <div>
       <Navbar />
-      <main className="py-[23px] px-[50px] bg-white dark:bg-[#000426] min-h-[100vh]">
+      <main className="py-[23px] px-[24px] sm:px-[50px] bg-white dark:bg-[#000426] min-h-[100vh]">
         <Outlet />
       </main>
     </div>
