@@ -15,7 +15,7 @@ function NftsContainer() {
       <button className="flex items-center gap-x-2 text-base font-medium leading-6 text-[#3a3a3a] dark:text-white">
         Latest <FaAngleDown />
       </button>
-      <div className="mt-6 flex flex-wrap justify-around gap-x-5 gap-y-6">
+      <div className="mt-6 justify-around gap-x-5 gap-y-6">
         <GoldRushProvider
           apikey={import.meta.env.VITE_COVALENT_API_KEY}
           mode="light"
