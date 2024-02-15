@@ -172,7 +172,7 @@ function NftPage() {
           </p>
         </div>
 
-        <div className="flex justify-between rounded-t-[10px] bg-[#ff4b8b] bg-opacity-10 px-3 pb-7 pt-4 sm:px-9">
+        <div className="flex flex-col gap-y-4 rounded-t-[10px] bg-[#ff4b8b] bg-opacity-10 px-3 pb-7 pt-4 sm:px-9 lg:flex-row lg:justify-between">
           <CreatorStat statName={"First minter"}>
             <img src={avatar} className="h-3 w-3" alt="" />
             Covalent
