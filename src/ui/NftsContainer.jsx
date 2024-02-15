@@ -11,7 +11,7 @@ function NftsContainer() {
   const navigate = useNavigate();
   const { dispatch } = useNft();
   return (
-    <div className="py-[21px]">
+    <div className="w-full overflow-x-hidden py-[21px]">
       <button className="flex items-center gap-x-2 text-base font-medium leading-6 text-[#3a3a3a] dark:text-white">
         Latest <FaAngleDown />
       </button>

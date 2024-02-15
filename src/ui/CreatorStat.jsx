@@ -2,11 +2,11 @@
 
 function CreatorStat({ statName, children }) {
   return (
-    <div className="flex flex-col gap-x-1 lg:gap-y-2 ">
-      <h4 className="text-[9px] text-[#3a3a3a] dark:text-white lg:text-sm">
+    <div className="flex flex-row justify-between gap-x-1 lg:flex-col lg:gap-y-2 ">
+      <h4 className="text-[9px] text-[#3a3a3a] dark:text-white lg:text-base">
         {statName}
       </h4>
-      <div className="flex items-center gap-x-[2px] lg:gap-x-[5px] lg:text-[10px] text-[8px] text-black dark:text-white">
+      <div className="flex items-center gap-x-[2px] text-[8px] text-black dark:text-white lg:gap-x-[5px] lg:text-[14px]">
         {children}
       </div>
     </div>
