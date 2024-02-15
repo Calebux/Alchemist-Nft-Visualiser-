@@ -9,7 +9,7 @@ function CreatorStats() {
         Covalent
       </CreatorStat>
       <CreatorStat statName={"Top minter"}>
-        <img src={avatar} className="h-3 w-3" alt="" />
+        <img src={avatar} className="sm:h-3 w-[10px] h-[10px] sm:w-3" alt="" />
         Covalent x16
       </CreatorStat>
       <CreatorStat statName={"Creator earnings"}>0.005328 ETH</CreatorStat>
